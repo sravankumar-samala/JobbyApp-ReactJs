@@ -1,0 +1,64 @@
+.job-details-container,
+.similar-job-container {
+  padding: 3em clamp(1em, 3.5vw, 3em);
+}
+.job-item-details-container {
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.job-item-details-container,
+.similar-job-item {
+  background-color: #272727;
+  border-radius: 1em;
+  padding: clamp(1em, 3vw, 2em);
+}
+.job-item-details-container .description-header {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+}
+.job-item-details-container .description p {
+  margin-top: 0;
+}
+.skills-list {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2em;
+  padding: 1em;
+}
+.skill-item {
+  align-items: center;
+  gap: 1em;
+}
+.skill-item img {
+  width: 40px;
+  height: 40px;
+}
+.skill-item p {
+  margin-block: 10px 5px;
+}
+.life-at-company-container {
+  grid-template-columns: repeat(2, auto);
+  gap: 1.5em;
+  place-items: center;
+}
+.company-image {
+  margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+  }
+  .skill-item {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+}
+@media (max-width: 576px) {
+  .life-at-company-container {
+    grid-template-columns: 1fr;
+  }
+  .company-image img {
+    border-radius: 10px;
+  }
+}

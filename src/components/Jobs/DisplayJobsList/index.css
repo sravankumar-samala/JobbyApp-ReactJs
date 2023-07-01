@@ -1,0 +1,31 @@
+.jobs-list {
+  gap: 2em;
+}
+.job-item-link {
+  place-content: start;
+  align-self: stretch;
+  color: white;
+  background-color: #272727;
+  border-radius: 1em;
+  max-width: 500px;
+  padding: clamp(1em, 3vw, 2em);
+}
+.job-item {
+  gap: clamp(0.5em, 2vw, 1em);
+}
+
+.job-item h2,
+.job-item h3 {
+  color: #f8fafc;
+}
+.job-item p {
+  color: #cddbe9;
+}
+
+@media (min-width: 1320px) {
+  .jobs-list {
+    gap: 1.5em;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /* place-items: center; */
+  }
+}

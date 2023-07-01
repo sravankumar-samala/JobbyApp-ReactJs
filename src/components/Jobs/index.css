@@ -1,0 +1,123 @@
+.jobs-page-container {
+  padding: 2em clamp(1em, 3.5vw, 3em);
+  gap: 2em;
+  grid-template-areas:
+    'profile search'
+    'profile jobs';
+  grid-template-columns: minmax(0, 35ch) 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  max-width: 60ch;
+  border: 1px solid #b6c5ff81;
+  border-radius: 7px;
+  overflow: hidden;
+  grid-area: search;
+}
+.search-container input {
+  border: none;
+  flex-grow: 1;
+  font-size: 1.1rem;
+  padding: 0.5em;
+}
+.search-container .search-btn {
+  align-self: stretch;
+  width: 50px;
+  background-color: #b6c5ff81;
+  place-items: center;
+  font-size: 1.2rem;
+  border-radius: 0;
+  color: #f8fafc;
+}
+.profile-filters-container {
+  grid-area: profile;
+  width: 100%;
+  flex-direction: column;
+}
+.profile-container-holder {
+  margin: 0 auto;
+  min-height: 200px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.profile-container {
+  padding: 1em;
+  background: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+  background-size: cover;
+  background-position: center center;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1em;
+}
+.profile-container h2 {
+  color: #6163ee;
+}
+.profile-container p {
+  color: #626872;
+  flex-grow: 1;
+}
+
+.jobs-container {
+  grid-area: jobs;
+}
+
+.loader-container {
+  height: 200px;
+  display: grid;
+  place-items: center;
+}
+
+.filters-container ul {
+  display: grid;
+  gap: 1em;
+}
+.filters-container input {
+  margin-right: 1em;
+}
+.filters-container h3 {
+  font-weight: 500;
+}
+.filters-container input,
+.filters-container label {
+  cursor: pointer;
+}
+
+.jobs-failed-container {
+  place-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-block: 2em;
+  text-align: center;
+}
+.jobs-failed-container h1 {
+  margin-block: 30px 20px;
+}
+.jobs-failed-container p {
+  margin-block: 0;
+}
+.jobs-failure .retry-btn {
+  margin-block: 2em;
+}
+
+@media (max-width: 576px) {
+  .jobs-page-container {
+    grid-template-areas:
+      'search'
+      'profile'
+      'jobs';
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+  .search-container {
+    max-width: 100%;
+  }
+  .profile-container-holder {
+    max-width: 300px;
+  }
+}

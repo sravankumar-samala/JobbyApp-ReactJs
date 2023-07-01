@@ -1,0 +1,22 @@
+.similar-jobs-list {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2em;
+}
+.similar-job-item {
+  padding: 1em;
+  display: grid;
+}
+.similar-job-item .info-details {
+  align-self: end;
+}
+@media (max-width: 800px) {
+  .job-item-header img {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-width: 450px) {
+  .similar-jobs-list {
+    grid-template-columns: 1fr;
+  }
+}
